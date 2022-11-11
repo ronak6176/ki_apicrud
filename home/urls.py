@@ -10,25 +10,32 @@ from rest_framework import routers
 urlpatterns = [
 
    #  path('', include(router.urls)),
-  
+#######################################__user__############################################
    path('', views.ApiOverview, name='home'), 
    path('create/user', views.add_items, name='add-items'),
    path('all/user', views.view_items, name='view_items'),
    path('update/<int:pk>/', views.update_items, name='update-items'),   
    path('item/<int:pk>/delete/', views.delete_items, name='delete-items'),
    # path('', include(router.urls)),
-# ###################################################################################33
+#########################################__appointment__##########################################33
    path('', views.ApiOverview, name='home'), 
-   path('create/appointment', views.add_items, name='add-items'),
-   path('all/appointment', views.view_items, name='view_items'),
+   path('create/appointment', views.appointment_add_items, name='add-items'),
+   path('all/appointment', views.appointment_view_items, name='view_items'),
    path('update/<int:pk>/', views.update_items, name='update-items'),   
    path('item/<int:pk>/delete/', views.delete_items, name='delete-items'),
-   #################################################################################
+###############################################__history__##################################
+   path('', views.ApiOverview, name='home'), 
+   path('create/history', views.add_items, name='add-items'),
+   path('all/history', views.view_items, name='view_items'),
+   path('update/<int:pk>/', views.update_items, name='update-items'),   
+   path('item/<int:pk>/delete/', views.delete_items, name='delete-items'),
+   #######################################__event_benefits__############################################
    path('', views.ApiOverview, name='home'), 
    path('create/event_benefits', views.add_items, name='add-items'),
    path('all/event_benefits', views.view_items, name='view_items'),
    path('update/<int:pk>/', views.update_items, name='update-items'),   
    path('item/<int:pk>/delete/', views.delete_items, name='delete-items'),
+   # path('', include(router.urls)),
 ]
 
 # urlpatterns = [

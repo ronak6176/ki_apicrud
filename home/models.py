@@ -45,10 +45,10 @@ class event_benefits(models.Model):
 
 class history(models.Model):
 	# id=models.AutoField
-	name = models.CharField(max_length=2000)
-	url = models.CharField(max_length=2000)
-	time = models.CharField(max_length=2000)
-	day = models.CharField(max_length=2000)
+	type = models.CharField(max_length=2000)
+	history_description = models.CharField(max_length=2000)
+	creation_time	 = models.CharField(max_length=2000)
+	user_name = models.CharField(max_length=2000)
 
 
 
