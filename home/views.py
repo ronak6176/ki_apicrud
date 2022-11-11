@@ -232,7 +232,7 @@ def ApiOverview(request):
 
 
 @api_view(['POST'])
-def add_items(request):
+def event_benefits_add_items(request):
 	item = RoSerializer(data=request.data)
 
 
@@ -252,7 +252,7 @@ def add_items(request):
 
 
 @api_view(['GET'])
-def view_items(request):
+def event_benefits_view_items(request):
     if request.method == 'GET':
         tutorials = event_benefits.objects.all()
         
@@ -316,7 +316,7 @@ def ApiOverview(request):
 
 
 @api_view(['POST'])
-def add_items(request):
+def history_add_items(request):
 	item = MRSerializer(data=request.data)
 
 
@@ -336,7 +336,7 @@ def add_items(request):
 
 
 @api_view(['GET'])
-def view_items(request):
+def history_view_items(request):
     if request.method == 'GET':
         tutorials = history.objects.all()
         
